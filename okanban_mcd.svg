@@ -1,0 +1,106 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="360" height="442" view_box="0 0 360 442"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Mon, 24 Jan 2022 02:56:41</desc>
+
+<rect id="frame" x="0" y="0" width="360" height="442" fill="#f5f5f5" stroke="none" stroke-width="0"/>
+
+<!-- Association POSSEDE -->
+<line x1="172" y1="45" x2="172" y2="135" stroke="#bf812d" stroke-width="1.5"/>
+<text x="178.0" y="98" fill="#01665e" font-family="Arial" font-size="12">0,N</text>
+<line x1="54" y1="225" x2="172" y2="135" stroke="#bf812d" stroke-width="1.5"/>
+<text x="105" y="200.793694894" fill="#01665e" font-family="Arial" font-size="12">1,1</text>
+<g id="association-POSSEDE">
+	<path d="M 234 107 a 14 14 90 0 1 14 14 V 134 h -152 V 121 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+	<path d="M 248 134.0 v 15 a 14 14 90 0 1 -14 14 H 110 a 14 14 90 0 1 -14 -14 V 134.0 H 152" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+	<rect x="96" y="107" width="152" height="56" fill="none" rx="14" stroke="#bf812d" stroke-width="3"/>
+	<line x1="96" y1="134" x2="248" y2="134" stroke="#bf812d" stroke-width="1.5"/>
+	<text x="137" y="127.3" fill="#000000" font-family="Arial Black" font-size="13">POSSEDE</text>
+	<text x="105" y="152.2" fill="#000000" font-family="Arial" font-size="14">position dans la liste</text>
+</g>
+
+<!-- Association DEFINIT -->
+<line x1="54" y1="225" x2="172" y2="307" stroke="#bf812d" stroke-width="1.5"/>
+<text x="105" y="253.630570848" fill="#01665e" font-family="Arial" font-size="12">0,N</text>
+<line x1="172" y1="397" x2="172" y2="307" stroke="#bf812d" stroke-width="1.5"/>
+<text x="178.0" y="352" fill="#01665e" font-family="Arial" font-size="12">0,N</text>
+<g id="association-DEFINIT">
+	<path d="M 197 279 a 14 14 90 0 1 14 14 V 306 h -78 V 293 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+	<path d="M 211 306.0 v 15 a 14 14 90 0 1 -14 14 H 147 a 14 14 90 0 1 -14 -14 V 306.0 H 78" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+	<rect x="133" y="279" width="78" height="56" fill="none" rx="14" stroke="#bf812d" stroke-width="3"/>
+	<line x1="133" y1="306" x2="211" y2="306" stroke="#bf812d" stroke-width="1.5"/>
+	<text x="142" y="299.3" fill="#000000" font-family="Arial Black" font-size="13">DEFINIT</text>
+</g>
+
+<!-- Association DECORE -->
+<line x1="54" y1="225" x2="172" y2="225" stroke="#bf812d" stroke-width="1.5"/>
+<text x="105" y="242.0" fill="#01665e" font-family="Arial" font-size="12">0,1</text>
+<line x1="298" y1="225" x2="172" y2="225" stroke="#bf812d" stroke-width="1.5"/>
+<text x="218" y="242.0" fill="#01665e" font-family="Arial" font-size="12">0,N</text>
+<g id="association-DECORE">
+	<path d="M 198 197 a 14 14 90 0 1 14 14 V 224 h -80 V 211 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+	<path d="M 212 224.0 v 15 a 14 14 90 0 1 -14 14 H 146 a 14 14 90 0 1 -14 -14 V 224.0 H 80" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+	<rect x="132" y="197" width="80" height="56" fill="none" rx="14" stroke="#bf812d" stroke-width="3"/>
+	<line x1="132" y1="224" x2="212" y2="224" stroke="#bf812d" stroke-width="1.5"/>
+	<text x="141" y="217.3" fill="#000000" font-family="Arial Black" font-size="13">DECORE</text>
+</g>
+
+<!-- Entity LISTE -->
+<g id="entity-LISTE">
+	<g id="frame-LISTE">
+		<rect x="130" y="9" width="84" height="28" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<rect x="130" y="37.0" width="84" height="44" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="130" y="9" width="84" height="72" fill="none" stroke="#35978f" stroke-width="3"/>
+		<line x1="130" y1="37" x2="214" y2="37" stroke="#35978f" stroke-width="1.5"/>
+	</g>
+	<text x="150" y="29.3" fill="#000000" font-family="Arial Black" font-size="13">LISTE</text>
+	<text x="138" y="53.2" fill="#000000" font-family="Arial" font-size="14">code_liste</text>
+	<line x1="138" y1="56" x2="205" y2="56" stroke="#000000" stroke-width="1.2"/>
+	<text x="138" y="71.2" fill="#000000" font-family="Arial" font-size="14">nom</text>
+</g>
+
+<!-- Entity COULEUR -->
+<g id="entity-COULEUR">
+	<g id="frame-COULEUR">
+		<rect x="245" y="189" width="106" height="28" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<rect x="245" y="217.0" width="106" height="44" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="245" y="189" width="106" height="72" fill="none" stroke="#35978f" stroke-width="3"/>
+		<line x1="245" y1="217" x2="351" y2="217" stroke="#35978f" stroke-width="1.5"/>
+	</g>
+	<text x="262" y="209.3" fill="#000000" font-family="Arial Black" font-size="13">COULEUR</text>
+	<text x="253" y="233.2" fill="#000000" font-family="Arial" font-size="14">code_couleur</text>
+	<line x1="253" y1="236" x2="342" y2="236" stroke="#000000" stroke-width="1.2"/>
+	<text x="253" y="251.2" fill="#000000" font-family="Arial" font-size="14">nom</text>
+</g>
+
+<!-- Entity CARTE -->
+<g id="entity-CARTE">
+	<g id="frame-CARTE">
+		<rect x="9" y="189" width="90" height="28" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<rect x="9" y="217.0" width="90" height="44" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="9" y="189" width="90" height="72" fill="none" stroke="#35978f" stroke-width="3"/>
+		<line x1="9" y1="217" x2="99" y2="217" stroke="#35978f" stroke-width="1.5"/>
+	</g>
+	<text x="29" y="209.3" fill="#000000" font-family="Arial Black" font-size="13">CARTE</text>
+	<text x="17" y="233.2" fill="#000000" font-family="Arial" font-size="14">code_carte</text>
+	<line x1="17" y1="236" x2="91" y2="236" stroke="#000000" stroke-width="1.2"/>
+	<text x="17" y="251.2" fill="#000000" font-family="Arial" font-size="14">titre</text>
+</g>
+
+<!-- Entity LABEL -->
+<g id="entity-LABEL">
+	<g id="frame-LABEL">
+		<rect x="128" y="361" width="88" height="28" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<rect x="128" y="389.0" width="88" height="44" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="128" y="361" width="88" height="72" fill="none" stroke="#35978f" stroke-width="3"/>
+		<line x1="128" y1="389" x2="216" y2="389" stroke="#35978f" stroke-width="1.5"/>
+	</g>
+	<text x="148" y="381.3" fill="#000000" font-family="Arial Black" font-size="13">LABEL</text>
+	<text x="136" y="405.2" fill="#000000" font-family="Arial" font-size="14">code_label</text>
+	<line x1="136" y1="408" x2="208" y2="408" stroke="#000000" stroke-width="1.2"/>
+	<text x="136" y="423.2" fill="#000000" font-family="Arial" font-size="14">nom</text>
+</g>
+</svg>
