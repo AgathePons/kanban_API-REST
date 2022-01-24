@@ -11,5 +11,4 @@
 |Utilisateur|Changer la position d'une liste dans le kanban| réordonner les listes entre elles |
 |Utilisateur|Changer la position d'une carte dans une liste| réordonner les cartes dans une liste |
 |Utilisateur|Changer une carte de liste| Déplacer une carte d'une liste à une autre |
-|Utilisateur|Créer une couleur| Créer une couleur qui pourra être associé à des cartes à la création (une carte ne pourras avoir qu'une couleur) |
 |Utilisateur|Créer un label| Créer un label qui pourra être associé à des cartes à la création (une carte pourra avoir plusieurs labels) |
