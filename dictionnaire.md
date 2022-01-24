@@ -17,6 +17,7 @@
 
 - nom ?
 - lié à des cartes
+- 1 couleur (optionnelle)
 
 **couleur**
 
