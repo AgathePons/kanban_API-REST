@@ -3,7 +3,7 @@
 ## MLD
 
 - list (<ins>id</ins>, name, position)
-- card (<ins>id</ins>, name, color, position)
+- card (<ins>id</ins>, name, color, position, #list(id))
 - tag (<ins>id</ins>, name, color)
 - card HAS tag (<ins>id</ins>, #card(id), #tag(id))
 
@@ -19,6 +19,7 @@
   - name : `TEXT`
   - color: `TEXT`
   - position : `INTEGER`
+  - list_id : `INTEGER`
 
 - **tag**
   - id : `SERIAL`
