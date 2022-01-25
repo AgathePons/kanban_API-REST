@@ -66,6 +66,11 @@ INSERT INTO "card_has_tag" ("card_id", "tag_id") VALUES
 (6, 2),
 (7, 1),
 (8, 1),
-(9, 1);
+(9, 1),
+(5, 4),
+(6, 4),
+(7, 4),
+(8, 4),
+(9, 5);
 
 COMMIT;
