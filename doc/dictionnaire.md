@@ -4,6 +4,7 @@
 
 - 1 nom
 - possède des cartes
+- 1 position dans le kanban
 
 **carte**
 
@@ -15,11 +16,6 @@
 
 **label**
 
-- nom ?
+- nom
 - lié à des cartes
 - 1 couleur (optionnelle)
-
-**couleur**
-
-- nom ?
-- code couleur
