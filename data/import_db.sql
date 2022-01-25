@@ -34,9 +34,6 @@ CREATE TABLE IF NOT EXISTS "card_has_tag" (
 );
 
 -- Put some data into the tables
---TODO
-BEGIN;
-
 INSERT INTO "list" ("name", "position") VALUES 
 ('To do', 1),
 ('Work in progress', 2),

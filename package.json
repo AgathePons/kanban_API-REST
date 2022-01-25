@@ -1,0 +1,35 @@
+{
+  "name": "s06-okanban-agathepons",
+  "version": "1.0.0",
+  "description": "kanban application",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "start": "node-dev index.js --no-notify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-Zagreus/S06-oKanban-AgathePons.git"
+  },
+  "keywords": [
+    "API",
+    "JS",
+    "NODE"
+  ],
+  "author": "AgathePons",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-clock-Zagreus/S06-oKanban-AgathePons/issues"
+  },
+  "homepage": "https://github.com/O-clock-Zagreus/S06-oKanban-AgathePons#readme",
+  "dependencies": {
+    "dotenv": "^14.3.0",
+    "eslint": "^8.7.0",
+    "express": "^4.17.2",
+    "pg": "^8.7.1",
+    "sequelize": "^6.14.1"
+  }
+}
