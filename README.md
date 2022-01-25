@@ -9,6 +9,8 @@ On refait Trello !
 - Chaque liste dispose d'un nom.
 - Chaque carte dispose d'un titre, d'une position au sein de la liste, d'une couleur (optionnelle) et d'un ou plusieurs label(s) (optionnel(s))
 
+Précision de MR Clientin : "Un label peut avoir sa couleur aussi (optionnel)".
+
 On se base sur ce besoin pour créer le MCD de l'application.
 
 **Important** : Pas question d'écrire la moindre ligne de SQL ! On s'arrête à la conception aujourd'hui. La mise en place effective de la BDD, c'est pour demain.
