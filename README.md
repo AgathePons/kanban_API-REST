@@ -1,5 +1,44 @@
 # oKanban
 
+## jour 3 : mise en place de l'API
+
+Commencer par rejouer le script de création de base pour être 100% comme le prof.
+
+On a créé notre DB, nos models Sequelize, ainsi que leurs assocations.
+
+On a aussi créé une mini base de projet express, avec un router, qui pour l'instant possède deux routes :
+
+- GET /lists pour récupérer toutes les listes
+- POST /lists pour créer une liste
+
+En suivant **scrupuleusement** le fichier [doc/ROUTES.md](ROUTES.md), implémenter les routes de notre application en suivant les principes de l'architecture rest.
+
+- inspirez vous de ce qui a été fait
+- on ne renvoie QUE du JSON, vous n'êtes pas censé faire de vues.
+- commencez peut être par les GET
+- puis les POST
+- puis PATCH
+- et enfin les delete
+- ou pas, si vous préférez faire ressource par ressource, pourquoi pas.
+
+Pour tester toutes ces routes, il existe plusieurs solutions, la plus simple reste d'utiliser un petit logiciel :
+
+- [Insomnia](https://support.insomnia.rest/article/23-installation#ubuntu)
+- [POSTMAN](https://www.getpostman.com/)
+- [VSC REST client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+- y'en a probablement d'autres...
+
+Bien sur, il est tout a fait normal de ne pas tout finir aujourd'hui, on va faire ces routes entre aujourd'hui et demain !
+
+### Bonus
+
+S'appliquer sur les codes HTTP, pour renvoyer les meilleurs codes possibles.
+On va voir sur https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP et on adapte nos controleurs pour qu'il renvoient les bons codes en fonction de l'action et de sa réussite ou de son échec.
+Par exemple : 
+```
+res.status(404).json({ error: 'No such list '});
+```
+
 ## jour 2 : BDD
 
 ### De "concept" à "logique"
