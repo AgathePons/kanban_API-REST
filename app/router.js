@@ -1,6 +1,7 @@
 const express = require('express');
 const cardController = require('./controllers/cardController');
 const listController = require('./controllers/listController');
+const tagController = require('./controllers/tagController');
 
 const router = express.Router();
 
@@ -17,7 +18,10 @@ router.get('/cards/:id', cardController.getOneCard);
 router.patch('/cards/:id', cardController.patchOneCard);
 router.delete('/cards/:id', cardController.deleteOneCard);
 // tags
-
-
+router.get('/tags', tagController.getAllTags);
+router.post('/tags', tagController.createTag);
+router.get('/tags/:id', tagController.getOneTag);
+router.patch('/tags/:id', tagController.patchOneTag);
+router.delete('/tags/:id', tagController.deleteOneTag);
 
 module.exports = router;
