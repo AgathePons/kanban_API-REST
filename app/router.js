@@ -26,5 +26,6 @@ router.patch('/tags/:id', tagController.patchOneTag);
 router.delete('/tags/:id', tagController.deleteOneTag);
 // card-tags
 router.post('/cards/:id/tags', cardTagController.asignTagToCard);
+router.delete('/cards/:cardId/tags/:tagId', cardTagController.removeTagToCard);
 
 module.exports = router;
