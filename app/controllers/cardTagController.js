@@ -23,7 +23,9 @@ const cardTagController = {
       // use the special method to instance fooInstance.addBar()
       // https://sequelize.org/master/manual/assocs.html
       await card.addTag(tag);
-      res.sendStatus(204);
+      await card.reload();
+      res.json(card);
+      // res.sendStatus(204);
     } catch(err) {
       console.log(err);
       res.status(500).json(err.toString());
@@ -46,7 +48,9 @@ const cardTagController = {
       }
       // use the special method to instance fooInstance.removeBar()
       await card.removeTag(tag);
-      res.sendStatus(204);
+      await card.reload();
+      res.json(card);
+      //res.sendStatus(204);
     } catch(err) {
       console.log(err);
       res.status(500).json(err.toString());
