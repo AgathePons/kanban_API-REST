@@ -4,56 +4,87 @@ const {
 
 const listController = {
   async getAllLists(req, res) {
-    const listArray = await List.findAll({
-      include: [{
-        // dans une liste je veux les cards
-        association: 'cards',
-        include: [
-          // et dans ces cards, je veux les tags
-          {
-            association: 'tags'
-          }
-        ]
-      }]
-    });
-    // je renvoie ma data en JSON
-    res.json(listArray);
+    try {
+      const listArray = await List.findAll({
+        include: [{
+          association: 'cards',
+          include: [{
+              association: 'tags'
+            }]
+        }]
+      });
+      res.json(listArray);
+    } catch(err) {
+      console.log(err);
+      res.status(500).json(err.toString());
+    }
   },
   async createList(req, res) {
-    // pour créer une liste, j'ai juste besoin de lui donner un name.
-    const newList = new List({
-      name: req.body.name
-    });
-    await newList.save();
-    // je renvoie l'instance agrémentée de son id
-    // je renvoie une 201 qui veut dire CREATED (cf wikipedia https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP)
-    res.status(201).json(newList);
+    try {
+      const newList = new List({
+        name: req.body.name
+      });
+      await newList.save();
+      res.status(201).json(newList);
+    } catch(err) {
+      console.log(err);
+      res.status(500).json(err.toString());
+    }
   },
   async getOneList(req, res) {
     const id = req.params.id;
-    const list = await List.findByPk(id, {
-      include: [{
-        association: 'cards',
+    try {
+      const list = await List.findByPk(id, {
         include: [{
-          association: 'tags'
+          association: 'cards',
+          include: [{
+            association: 'tags'
+          }]
         }]
-      }]
-    });
-    res.json(list);
+      });
+      if(!list) {
+        return res.status(404).json({ error: `No list with id ${id}`});
+      }
+      res.json(list);
+    } catch(err) {
+      console.log(err);
+      res.status(500).json(err.toString());
+    }
   },
   async patchOneList(req, res) {
     const id = req.params.id;
-    const list = await List.findByPk(id);
-    list.name = req.body.name;
-    list.position = req.body.position;
-    await list.save();
-    res.json(list); //! status ?
+    try {
+      const list = await List.findByPk(id);
+      if(!list) {
+        return res.status(404).json({ error: `No list with id ${id}`});
+      }
+      if(req.body.name) {
+        list.name = req.body.name;
+      }
+      if(req.body.position) {
+        list.position = req.body.position;
+      }
+      await list.save();
+      res.json(list);
+    } catch(err) {
+      console.log(err);
+      res.status(500).json(err.toString());
+    }
   },
   async deleteOneList(req, res) {
     const id = req.params.id;
-    const list = await List.findByPk(id);
-    await list.destroy();
-    res.sendStatus(204);
+    try {
+      const list = await List.findByPk(id);
+      if(!list) {
+        return res.status(404).json({ error: `No list with id ${id}`});
+      } else {
+        await list.destroy();
+        res.sendStatus(204);
+      }
+    } catch(err) {
+      console.log(err);
+      res.status(500).json(err.toString());
+    }
   }
 }
 
