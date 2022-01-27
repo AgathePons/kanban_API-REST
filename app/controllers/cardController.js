@@ -52,6 +52,9 @@ const cardController = {
     const id = req.params.id;
     try {
       const card = await Card.findByPk(id);
+      if(!card) {
+        return res.status(404).json({ error: `No card with id ${id}`});
+      }
       if(req.body.content) {
         card.content = req.body.content;
       }
