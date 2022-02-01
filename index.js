@@ -3,6 +3,8 @@ require('dotenv').config();
 const express = require('express');
 const setHeaders = require('./app/middlewares/setHeaders');
 const router = require('./app/router');
+const multer = require('multer');
+const bodyParser = multer();
 
 const port = process.env.PORT || 3000;
 
@@ -12,6 +14,8 @@ app.use(setHeaders.setUrl, setHeaders.setMethods, setHeaders.setHeaders, setHead
 
 // la petite ligne pour réussir a ouvrir un POST
 app.use(express.urlencoded({extended: true}));
+
+app.use(bodyParser.none());
 
 app.use(router);
 

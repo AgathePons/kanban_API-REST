@@ -1,6 +1,6 @@
 const setHeaders = {
   setUrl(_req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5050');
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost');
     next();
   },
   setMethods(_req, res, next) {
