@@ -11,7 +11,11 @@ const listController = {
           include: [{
               association: 'tags'
             }]
-        }]
+        }],
+        order: [
+          ['position', 'ASC'],
+          ['cards', 'position', 'ASC']
+        ]
       });
       res.json(listArray);
     } catch(err) {
