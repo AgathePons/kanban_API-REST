@@ -17,6 +17,8 @@ app.use(express.urlencoded({extended: true}));
 
 app.use(bodyParser.none());
 
+app.use(express.static('./assets'));
+
 app.use(router);
 
 app.listen(port, _ => {
