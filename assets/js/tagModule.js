@@ -1,3 +1,5 @@
+const utilsModule = require('./utilsModule');
+
 const tagModule = {
   makeTagInCardInDOM: function(cardId, tag) {
     const cardTagBloc = document.querySelector(`.box[data-card-id="${cardId}"] .card-tag-bloc`);
