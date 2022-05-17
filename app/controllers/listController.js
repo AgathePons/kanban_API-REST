@@ -1,43 +1,95 @@
-const { List } = require('../models');
+const {
+  List
+} = require('../models');
 
 const listController = {
-    async getAllLists(req, res) {
-        const listArray = await List.findAll({
-            include: [
-                {
-                    // dans une liste je veux les cards
-                    association: 'cards',
-                    include: [
-                        // et dans ces cards, je veux les tags
-                        { association: 'tags' }
-                    ]
-                }
-            ]
-        });
-
-        // je renvoie ma data en JSON
-        // et... c'est tout !
-        // je ne fais pas de vue, c'est le client qui se débrouillera 
-        // pour mettre en forme la donnée :)
-        res.json(listArray);
-    },
-    async createList(req, res) {
-        // pour créer une liste, j'ai juste besoin
-        // de lui donner un name.
-        // ce name, je vais le récupérer dans le body de la requete
-
-        const newList = new List({
-            name: req.body.name
-        });
-
-        // newList va etre sauvegardée
-        // et sequelize va noter son id dans l'instance
-        await newList.save();
-
-        // je renvoie l'instance agrémentée de son id
-        // je renvoie une 201 qui veut dire CREATED (cf wikipedia https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP)
-        res.status(201).json(newList);
+  async getAllLists(req, res) {
+    try {
+      const listArray = await List.findAll({
+        include: [{
+          association: 'cards',
+          include: [{
+              association: 'tags'
+            }]
+        }],
+        order: [
+          ['position', 'ASC'],
+          ['cards', 'position', 'ASC']
+        ]
+      });
+      res.json(listArray);
+    } catch(err) {
+      console.log(err);
+      res.status(500).json(err.toString());
     }
+  },
+  async createList(req, res) {
+    try {
+      const newList = new List({
+        name: req.body.name
+      });
+      await newList.save();
+      res.status(201).json(newList);
+    } catch(err) {
+      console.log(err);
+      res.status(500).json(err.toString());
+    }
+  },
+  async getOneList(req, res) {
+    const id = req.params.id;
+    try {
+      const list = await List.findByPk(id, {
+        include: [{
+          association: 'cards',
+          include: [{
+            association: 'tags'
+          }]
+        }]
+      });
+      if(!list) {
+        return res.status(404).json({ error: `No list with id ${id}`});
+      }
+      res.json(list);
+    } catch(err) {
+      console.log(err);
+      res.status(500).json(err.toString());
+    }
+  },
+  async patchOneList(req, res) {
+    const id = req.params.id;
+    try {
+      const list = await List.findByPk(id);
+      if(!list) {
+        return res.status(404).json({ error: `No list with id ${id}`});
+      }
+      if(req.body.name) {
+        list.name = req.body.name;
+      }
+      if(req.body.position) {
+        list.position = req.body.position;
+      }
+      await list.save();
+      res.json(list);
+    } catch(err) {
+      console.log(err);
+      res.status(500).json(err.toString());
+    }
+  },
+  async deleteOneList(req, res) {
+    const id = req.params.id;
+    try {
+      const list = await List.findByPk(id);
+      if(!list) {
+        return res.status(404).json({ error: `No list with id ${id}`});
+      } else {
+        await list.destroy();
+        res.sendStatus(204);
+      }
+    } catch(err) {
+      console.log(err);
+      res.status(500).json(err.toString());
+    }
+  }
 }
 
 module.exports = listController;
