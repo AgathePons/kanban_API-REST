@@ -9,7 +9,7 @@ CREATE TABLE "list" (
     "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     "name" TEXT NOT NULL DEFAULT '',
     "position" INTEGER NOT NULL DEFAULT 0,
-    -- pour avoir la date et l'heure on utilise le type "timestamp", et pour Ãªtre le plus prÃ©cis possible on utilisera plutÃ´t le type "timestampz" qui contient en plus de la date et de l'heure le fuseau horaire dÃ©fini dans les locales du serveur
+    -- pour avoir la date et l'heure on utilise le type "timestamp", et pour être le plus précis possible on utilisera plutôt le type "timestampz" qui contient en plus de la date et de l'heure le fuseau horaire défini dans les locales du serveur
     "created_at" TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     "updated_at" TIMESTAMPTZ
 );
