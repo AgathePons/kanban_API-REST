@@ -60,7 +60,7 @@ Check if the API (back side) works: `localhost:3000/lists` (should return a json
 
 ### Run the front app
 
-Check if your apache localhost is running   
+Check if your apache localhost is running  
 (Ubuntu)
 
 ```cmd
