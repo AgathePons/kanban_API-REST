@@ -2,4 +2,4 @@
 
 ## build db
 
-`psql -U kanban -d kanbandb -f data/create_tables.sql`
+`psql -U <username> -d <dbname> -f data/create_tables.sql`
